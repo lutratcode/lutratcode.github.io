@@ -1,0 +1,111 @@
+@use "base";
+
+
+// card
+main,
+.content{
+    background-color: var(--background-color);
+
+}
+.card {
+   
+    margin-top: 0px;
+    &-img {
+        border-radius: 0px;
+        width: 23.4375rem;
+        height: 17.1875rem;
+        margin-bottom: 2rem;
+    }
+
+    &-title {
+        padding: 2rem 0 0 1.061rem;
+        font-family: Shrikhand;
+        font-size: 1.75rem;
+   
+
+    }
+    &-description {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        color: var(--black);
+      
+        background-image: url(../../assets/images/icon/Background.png);
+        background-size: cover;
+    }
+}
+
+
+
+.new,
+.card-paragraph {
+    display: none;
+}
+.like {
+    margin-top: 2.44rem;
+}
+
+// menu
+.menu {
+    background-color: var(--background-color);
+    .entrees {
+    width: 21.8125rem;
+    }
+    &>div {
+        margin: 0.75rem auto;
+    }
+    &-titre {
+    margin-top: 2.5rem;
+    color: black;
+    font-size: 1rem;
+    font-weight: 300;
+    text-transform: capitalize;
+    background-color: var(--background-color);
+    line-height: 1.6875rem;
+    background-image: url(../../assets/images/icon/Line\ 2.png);
+    background-repeat: no-repeat;
+    background-position: 0 100%;
+    }
+}
+
+.menu-list {
+    margin: 0 auto;
+
+    padding: 0.94rem;
+    width: 21.8125rem;
+    height: 4.3125rem;
+    border-radius: 0.94019rem;
+    background: var(--white);
+    box-shadow: 0px 4.011px 15.043px 0px rgba(0, 0, 0, 0.10);
+        &-name {
+            h4 {
+                font-size: 1.125rem;
+                font-weight: 500;
+            }
+            
+        }
+        &-description {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            // margin-top: 0.31rem;
+            p {
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                font-weight: 300;
+                align-self: stretch;
+            }
+            span {
+                font-size: 0.94019rem;
+            font-weight: 700;
+            color: #353535;
+            }
+        }
+        
+    }
+.btn {
+    margin-top: 2.5rem;
+    margin-bottom: 2.5rem;
+}
+
+ 
