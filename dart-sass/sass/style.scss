@@ -12,6 +12,7 @@
             width: 0.75rem;
             height: 1rem;
             margin-left: 1.06rem;
+            
         }
     }
 
@@ -37,37 +38,61 @@
         width: 100%;
         height: 17.94rem;
         background-color: #F6F6F6;
-        &-titre {
-        font-size: 1.5rem;
-        font-weight: 700;
-        text-align: center;
-        margin: 0 auto;
-        padding: 1.5rem 0;
-        word-wrap:break-word; width: 260px;
-        }
-        &-paragraphe {
-        font-size: 1.125rem;
-        font-weight: 300;
-        text-align: center;
-        }
+            &-titre {
+            font-size: 1.5rem;
+            font-weight: 700;
+            text-align: center;
+            margin: 0 auto;
+            padding: 1.5rem 0;
+            word-wrap:break-word; width: 260px;
+                @media (min-width:900px) {
+                font-size: 2.5rem;
+                word-wrap: none; width: 100%;
+                padding: 1.88rem 0;
+                }
+            }
+        
+            &-paragraphe {
+            font-size: 1.125rem;
+            font-weight: 300;
+            text-align: center;
+            }
+        
+            
         .btn {
          margin: 1.68rem auto 3.56rem;
+
+         @media (min-width:900px) {
+            margin-bottom: 1.88rem;
         }
     }
+    }
     .section-fonctionnnement {
+        width: 100%;
         height: 27.5rem;
         margin: 0 1.25rem;
         &-h2 {
-        margin-top: 3rem;
+        margin: 3rem 1.25rem;
+        @media (min-width:1024px) {
+            margin: 3.12rem 11.25rem;
         }
+        }
+        
     }
     
     .fonctionnement {
 
+        @media (min-width:1137px) {
+            margin: 3.12rem 11.25rem;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
         &-btnnav {
             position: relative;
-            margin-top: 1.56rem;
-            margin-left: 2.03rem;
+            margin: 1.56rem auto;
+            // margin-left: 2.03rem;
             text-align: center;
             padding-top: 1.53rem;
             width: 20.15538rem;
@@ -93,7 +118,7 @@
             width: 1.5rem;
             text-align: center;
             border-radius: 50%;
-            background-color: var(--primary);
+            background-color: var(--violet);
             i {
                 font-size: 0.88638rem;
                 font-weight: 500;
@@ -103,95 +128,63 @@
             }
         }
 
-    .section-restaurant {
-        height: 76.63rem;
+    .restaurant {
         background-color: var(--background-color);
         margin-top: 4.25rem;
-        padding-left: 1.13rem;
-        &-title {
-            padding-top: 3.38rem ;
-            // padding-bottom: 1.5rem;
+        padding: 3.38rem 1.13rem 4.25rem;
+        @media (min-width:1024px) {
+            padding: 1.88rem 11.25rem;
         }
     }
 
-    .card {
-        border-radius: 0.9375rem;
+    .section-restaurant {
+        display: flex;
+        flex-direction:column ;
+        justify-content: center;
 
-        background: #FFF;
+        
 
-        height: 15.6875rem;
-        width: 21.25rem;
-        margin-top: 1.12rem;
-        position: relative;
-       
+        @media (min-width:739px) {
+            flex-direction: row;
+            justify-content: space-between;
+            gap: 6.25rem;
+        }
+
+    
 
     }
 
     .card {
+        flex: 1 1 15.6875rem;
+        // width: 21.625rem;
         border-radius: 0.9375rem;
-
         background: #FFF;
-
-        height: 15.6875rem;
-        width: 21.25rem;
+        // height: 15.6875rem;
+        
         margin-top: 1.12rem;
-        // position: relative;
-
-
         &-img {
-            // background-image: url(../../assets/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg);
-            // background-size:cover;
-            width: 21.25rem;
             height: 10.6875rem;
             border-radius: 0.9375rem 0.9375rem 0 0;
-            // object-fit: cover;
         }
-
         &-title {
             font-size: 1.125rem;
             font-weight: 700;
             color: var(--black);
             padding: 1rem 0 0 0.81rem;
         }
-
         &-paragraph {
             font-size: 1.0625rem;
             font-weight: 300;
             color: var(--black);
             padding: 0.31rem 0 0.75rem 0.81rem;
         }
-
-        // .card-palette {
-        //     .card-img {
-        //         background-image: url(../../assets/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg);
-        //     }
-        // }
-
-        // .card-enchantee {
-        //     .card-img {
-        //         background-image: url(../../assets/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg);
-        //     }
-        // }
-        // .card-francaise {
-        //     .card-img {
-        //         background-image: url(../../assets/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg);
-        //     }
-        // }
-        // .card-delice {
-        //     .card-img {
-        //         background-image: url(../../assets/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg);
-        //     }
-        // }
-
         .new {
             position: absolute;
             top: 0.6225rem;
             right: 0.94rem;
         }
-        // .card-description {
-        //     display: flex;
-        //     justify-content: space-between;
-            
-        // }
     }
+
+
+    
 
