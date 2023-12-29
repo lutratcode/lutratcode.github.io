@@ -14,6 +14,11 @@ body {
   margin: 0 auto;
   width: 375px;
 }
+@media (min-width: 375px) {
+  body {
+    width: 100%;
+  }
+}
 
 a {
   text-decoration: none;
@@ -42,21 +47,29 @@ h2 {
 }
 
 .header {
-  padding-bottom: 0.03125rem;
-  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
-}
-
-.header-goback {
   display: flex;
   align-items: center;
   height: 63px;
   background-color: var(--white);
+  padding-bottom: 0.03125rem;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
 }
-.header-goback-link {
+@media (min-width: 90rem) {
+  .header {
+    height: 6rem;
+  }
+}
+.header-goback {
+  height: 63px;
+  background-color: var(--white);
+}
+.header-goback .header-goback-link {
+  display: inline-block;
   width: 30px;
   height: 30px;
   padding: 9px;
   margin-left: 17px;
+  margin-top: 14px;
 }
 
 .header-logo {
@@ -73,22 +86,49 @@ h2 {
 }
 
 .footer {
-  width: 23.4375rem;
   padding: 1.375rem 1.5625rem;
   background-color: var(--grey);
 }
-.footer-dt {
+@media (min-width: 67.5rem) {
+  .footer {
+    display: flex;
+    flex-direction: row-reverse;
+    align-content: end;
+    width: 100%;
+    align-items: flex-end;
+    padding: 1.88rem 1.56rem;
+  }
+}
+.footer-title {
   font-family: "Shrikhand", serif;
   font-weight: 400;
   font-size: 1.125rem;
   margin-bottom: 0.5rem;
 }
-.footer-dd {
+@media (min-width: 739px) {
+  .footer-title {
+    margin-bottom: 0;
+  }
+}
+.footer-li {
+  width: 11.5rem;
   font-size: 1rem;
   line-height: 1.5rem;
+  margin-right: 0.12rem;
 }
-.footer-dt a, .footer-dd a {
+.footer-li:nth-child(3), .footer-li:nth-child(4) {
+  width: 8.125rem;
+}
+.footer-title a, .footer-li a {
   color: var(--white);
+}
+@media (min-width: 739px) {
+  .footer ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    flex: 1;
+  }
 }
 
 .center {
@@ -108,9 +148,22 @@ h2 {
   border: none;
   border-radius: 1.5625rem;
   box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+  position: relative;
 }
-.btn:hover, .btn:active {
+.btn:hover::after {
+  opacity: 1;
+}
+.btn::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
   background: linear-gradient(201deg, #9356DC -5.2%, #FF79DA 110.74%);
+  opacity: 0.35;
+  z-index: -1;
+  transition: all 400ms;
 }
 
 .like {
@@ -130,6 +183,7 @@ h2 {
 }
 .card-img {
   background-size: cover;
+  background-position: center;
 }
 .card .card-palette .card-img {
   background-image: url(../../assets/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg);
@@ -148,9 +202,13 @@ h2 {
   justify-content: space-between;
 }
 
-main,
-.content {
+main {
   background-color: var(--background-color);
+}
+@media (min-width: 90rem) {
+  main {
+    background-color: #fff;
+  }
 }
 
 .card {
@@ -158,31 +216,56 @@ main,
 }
 .card-img {
   border-radius: 0px;
-  width: 23.4375rem;
+  width: 100%;
   height: 17.1875rem;
-  margin-bottom: 2rem;
 }
 .card-title {
   padding: 2rem 0 0 1.061rem;
   font-family: Shrikhand;
   font-size: 1.75rem;
 }
-.card-description {
+.card .card-description {
   position: absolute;
-  bottom: 0;
+  bottom: -0.3rem;
   width: 100%;
   color: var(--black);
-  background-image: url(../../assets/images/icon/Background.png);
+  background-image: url(../../assets/images/icon/card-description.svg);
   background-size: cover;
 }
+@media (min-width: 700px) {
+  .card .card-description {
+    display: flex;
+    justify-content: center;
+  }
+}
+@media (min-width: 90rem) {
+  .card .card-description {
+    width: 66.9375rem;
+    left: 0;
+    right: 0;
+    margin: auto;
+  }
+}
 
-.new,
-.card-paragraph {
+.new {
   display: none;
 }
 
 .like {
   margin-top: 2.44rem;
+}
+@media (min-width: 400px) {
+  .like {
+    margin-left: 1.5rem;
+  }
+}
+
+@media (min-width: 90rem) {
+  .menu-content {
+    width: 65.9375rem;
+    background-color: var(--background-color);
+    overflow: hidden;
+  }
 }
 
 .menu {
@@ -190,6 +273,11 @@ main,
 }
 .menu .entrees {
   width: 21.8125rem;
+}
+@media (min-width: 700px) {
+  .menu .entrees {
+    width: 39.625rem;
+  }
 }
 .menu > div {
   margin: 0.75rem auto;
@@ -199,7 +287,7 @@ main,
   color: black;
   font-size: 1rem;
   font-weight: 300;
-  text-transform: capitalize;
+  text-transform: uppercase;
   background-color: var(--background-color);
   line-height: 1.6875rem;
   background-image: url(../../assets/images/icon/Line\ 2.png);
@@ -209,37 +297,83 @@ main,
 
 .menu-list {
   margin: 0 auto;
-  padding: 0.94rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-content: center;
   width: 21.8125rem;
   height: 4.3125rem;
   border-radius: 0.94019rem;
   background: var(--white);
   box-shadow: 0px 4.011px 15.043px 0px rgba(0, 0, 0, 0.1);
 }
+@media (min-width: 700px) {
+  .menu-list {
+    width: 39.625rem;
+  }
+}
+.menu-list-name {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 0.94rem;
+}
 .menu-list-name h4 {
+  width: 14.25rem;
+  height: 1.3125rem;
   font-size: 1.125rem;
   font-weight: 500;
-}
-.menu-list-description {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
-.menu-list-description p {
   text-overflow: ellipsis;
   white-space: nowrap;
-  font-weight: 300;
-  align-self: stretch;
 }
-.menu-list-description span {
+
+.select-btn {
+  display: none;
+}
+
+.menu-list-description {
+  display: flex;
+  justify-content: space-between;
+}
+.menu-list-description-detail {
+  width: 14.25rem;
+  font-size: 0.94019rem;
+  font-weight: 300;
+  white-space: nowrap;
+}
+@media (min-width: 734px) {
+  .menu-list-description-detail {
+    flex: 1 0 14.25rem;
+  }
+}
+.menu-list-description .prix {
   font-size: 0.94019rem;
   font-weight: 700;
   color: #353535;
 }
 
+.menu-list:hover-name,
+.menu-list:active-name {
+  overflow: hidden;
+  flex: 1 0 18.125rem;
+}
+.menu-list:hover .select-btn,
+.menu-list:active .select-btn {
+  display: block;
+  border: none;
+  outline: none;
+}
+.menu-list:hover .menu-list-description-detail,
+.menu-list:active .menu-list-description-detail {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
 .btn {
   margin-top: 2.5rem;
   margin-bottom: 2.5rem;
+  flex: 0;
 }
 
 /*# sourceMappingURL=restaurant.css.map */

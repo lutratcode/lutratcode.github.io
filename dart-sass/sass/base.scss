@@ -1,3 +1,4 @@
+// #region set base
 * {
     margin: 0;
     padding: 0;
@@ -12,9 +13,7 @@ body {
     font-family: 'Roboto', sans-serif;
     color: var(--black);
     margin: 0 auto;
-    // width: 100%;
     width: 375px;
-    // width: 23.4375rem;
     @media (min-width: 375px) {
         width: 100%;
     }
@@ -47,33 +46,38 @@ h2 {
     margin: 0 auto;
 }
 
+// #endregion
+
+// #region header
 .header {
+    display: flex;
+    align-items: center;
+    height: 63px;
+    background-color: var(--white);
+    @media (min-width:90rem) {
+        height: 6rem;
+     }
     padding-bottom: 0.03125rem;
     box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
   
 
-&-goback {
-    display: flex;
-    align-items: center;
-    // width: 375px;
+    &-goback {
     height: 63px;
     background-color: var(--white);
-    @media (min-width:739px) {
-        height: 6rem;
-     }
-    &-link {
+
+    .header-goback-link {
+        display: inline-block;
         width: 30px;
         height: 30px;
         padding: 9px;
         margin-left: 17px;
+        margin-top: 14px;
         }
     } 
 }
-.goback-icon {
-        @media (min-width:739px) {
-            visibility: hidden;
-        }
-    }
+// .goback-icon {
+//        padding-top: 1.5rem;
+//     }
 
    
 
@@ -90,8 +94,10 @@ h2 {
         font-size: 0px;
         }
     }
+// #endregion header
 
 
+// #region footer
     // footer
     .footer {
         padding: 1.375rem 1.5625rem;
@@ -142,8 +148,10 @@ h2 {
             }
         }
     }
+// #endregion footer
 
 
+// #region buttons like 
 // buttons
     .center {
         text-align: center;
@@ -151,6 +159,9 @@ h2 {
 
     $button-gradient: linear-gradient(193deg, #9356DC -11.44%, #FF79DA 123.93%);
     $button-gradient-hover: linear-gradient(201deg, #9356DC -5.2%, #FF79DA 110.74%);
+    
+    // (0deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.15) 100%);
+    
  
 
     .btn {
@@ -166,9 +177,33 @@ h2 {
         border: none;
         border-radius: 1.5625rem;
         box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
-        &:hover,
-        &:active {
+        // opacity: 1;
+        // transition: ease-out all 300ms;
+        position: relative;
+        
+        // &:hover,
+        // &:active {
+        //     background: $button-gradient-hover;
+        //     box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.35);
+        //     opacity: 0.35;
+        // }
+
+        &:hover {
+            &::after{
+                opacity: 0.35;
+            }
+        }
+        &::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
             background: $button-gradient-hover;
+            opacity: 0;
+            z-index: -1;
+            transition: all 400ms;
         }
     }
 
@@ -184,15 +219,17 @@ h2 {
         .like:active {
         background-image: url(../../assets/images/icon/like-color.png);
     }
+// #endregion button like
 
-        
-    
+
+// #region card
 
     .card {
         position: relative;
 
         &-img {
             background-size:cover;
+            background-position: center;
            
         }
 
@@ -222,7 +259,10 @@ h2 {
         .card-description {
             display: flex;
             justify-content: space-between;
+
+
             
         }
     }
 
+// #endregion card

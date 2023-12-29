@@ -1,6 +1,13 @@
 
 
     @use "base";
+
+    .goback-icon {
+        @media (min-width:739px) {
+            visibility: hidden;
+        }
+    }
+  
     
     .location {
         height: 3.125rem;
@@ -36,18 +43,23 @@
     // section intro
     .intro {
         width: 100%;
-        height: 17.94rem;
+        height: 17.97rem;
         background-color: #F6F6F6;
+        @media (min-width:900px) {
+           height: 14.94rem;
+            }
+
             &-titre {
             font-size: 1.5rem;
             font-weight: 700;
             text-align: center;
             margin: 0 auto;
             padding: 1.5rem 0;
-            word-wrap:break-word; width: 260px;
+            white-space: pre-wrap;
                 @media (min-width:900px) {
                 font-size: 2.5rem;
-                word-wrap: none; width: 100%;
+                white-space: nowrap; 
+                width: 100%;
                 padding: 1.88rem 0;
                 }
             }

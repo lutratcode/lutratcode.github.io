@@ -1,55 +1,79 @@
 @use "base";
 
-
-// card
-main,
-.content{
+main {
     background-color: var(--background-color);
-
+    @media (min-width:90rem) {
+    background-color: #fff;
+    }
 }
+
+
+
+
 .card {
-   
     margin-top: 0px;
     &-img {
         border-radius: 0px;
-        width: 23.4375rem;
+        width: 100%;
+        // width: 23.4375rem;
         height: 17.1875rem;
-        margin-bottom: 2rem;
     }
 
     &-title {
         padding: 2rem 0 0 1.061rem;
         font-family: Shrikhand;
         font-size: 1.75rem;
-   
-
     }
-    &-description {
+
+    .card-description {
         position: absolute;
-        bottom: 0;
+        bottom: -0.3rem;
         width: 100%;
         color: var(--black);
-      
-        background-image: url(../../assets/images/icon/Background.png);
+        // background-image: url(../../assets/images/icon/Background.png);
+        background-image: url(../../assets/images/icon/card-description.svg);
         background-size: cover;
+        @media (min-width:700px) {
+            display: flex;
+            justify-content: center;
+        }
+        @media (min-width:90rem) {
+            width: 66.9375rem;
+            left: 0;
+            right: 0;
+            margin: auto;
+        }
     }
 }
 
-
-
-.new,
-.card-paragraph {
+.new {
     display: none;
 }
 .like {
     margin-top: 2.44rem;
+    @media (min-width:400px) {
+        margin-left: 1.5rem;
+    }
 }
 
+
 // menu
+.menu-content {
+    @media (min-width:90rem) {
+        width: 65.9375rem;
+        background-color: var(--background-color);
+        overflow: hidden;
+    }
+    
+}
+
 .menu {
     background-color: var(--background-color);
     .entrees {
-    width: 21.8125rem;
+        width: 21.8125rem;
+        @media (min-width:700px) {
+            width: 39.625rem;
+        }
     }
     &>div {
         margin: 0.75rem auto;
@@ -59,7 +83,7 @@ main,
     color: black;
     font-size: 1rem;
     font-weight: 300;
-    text-transform: capitalize;
+    text-transform: uppercase;
     background-color: var(--background-color);
     line-height: 1.6875rem;
     background-image: url(../../assets/images/icon/Line\ 2.png);
@@ -70,42 +94,90 @@ main,
 
 .menu-list {
     margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: center;
+    
 
-    padding: 0.94rem;
     width: 21.8125rem;
     height: 4.3125rem;
     border-radius: 0.94019rem;
     background: var(--white);
     box-shadow: 0px 4.011px 15.043px 0px rgba(0, 0, 0, 0.10);
+    @media (min-width:700px) {
+        width: 39.625rem;
+    }
+
         &-name {
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+            padding: 0.94rem;
+
             h4 {
+                width: 14.25rem;
+                height: 1.3125rem;
                 font-size: 1.125rem;
                 font-weight: 500;
-            }
-            
-        }
-        &-description {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            // margin-top: 0.31rem;
-            p {
                 text-overflow: ellipsis;
                 white-space: nowrap;
-                font-weight: 300;
-                align-self: stretch;
-            }
-            span {
-                font-size: 0.94019rem;
-            font-weight: 700;
-            color: #353535;
+                // text-wrap: nowrap;
             }
         }
         
+            
     }
+    .select-btn{
+        display: none;
+    }
+            
+    .menu-list-description {
+    display: flex;
+    justify-content: space-between;
+    // width: 100%;
+    // align-items:center ;
+    
+    &-detail {
+        
+        width: 14.25rem;
+        font-size: 0.94019rem;
+        font-weight: 300;
+        white-space: nowrap;
+        @media (min-width:734px) {
+            flex: 1 0 14.25rem;
+        }
+    }
+    .prix {
+        // padding-right: 0.94rem;
+        font-size: 0.94019rem;
+        font-weight: 700;
+        color: #353535;
+        }
+    }
+.menu-list:hover,
+.menu-list:active {
+    &-name {
+        overflow: hidden;
+        flex: 1 0 18.125rem;
+    }
+    .select-btn {
+        display: block;
+        border: none;
+        outline: none;
+        // transition: all 1s;
+    }
+    .menu-list-description-detail {
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+}  
+    
 .btn {
     margin-top: 2.5rem;
     margin-bottom: 2.5rem;
+    flex: 0;
 }
 
  
