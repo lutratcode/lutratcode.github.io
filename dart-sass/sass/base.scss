@@ -9,6 +9,19 @@ li {
     list-style: none;
 }
 
+<<<<<<< HEAD
+=======
+body {
+    font-family: 'Roboto', sans-serif;
+    color: var(--black);
+    margin: 0 auto;
+    width: 375px;
+    @media (min-width: 375px) {
+        width: 100%;
+    }
+}
+
+>>>>>>> 4b3b3d416616c5287e964086eeaefc1059f0dc09
 a {
     text-decoration: none;    
 }
@@ -36,6 +49,7 @@ h2 {
     margin: 0 auto;
 }
 
+<<<<<<< HEAD
 $width-mobile:23.4375rem;
 $width-max-mobile:48rem;
 $width-desktop:60rem;
@@ -62,6 +76,8 @@ main{
 
 
 
+=======
+>>>>>>> 4b3b3d416616c5287e964086eeaefc1059f0dc09
 // #endregion
 
 // #region header
@@ -70,8 +86,12 @@ main{
     align-items: center;
     height: 63px;
     background-color: var(--white);
+<<<<<<< HEAD
     @media (min-width:$width-max-desktop) {
         width: $width-max-desktop;
+=======
+    @media (min-width:90rem) {
+>>>>>>> 4b3b3d416616c5287e964086eeaefc1059f0dc09
         height: 6rem;
      }
     padding-bottom: 0.03125rem;
@@ -92,6 +112,15 @@ main{
         }
     } 
 }
+<<<<<<< HEAD
+=======
+// .goback-icon {
+//        padding-top: 1.5rem;
+//     }
+
+   
+
+>>>>>>> 4b3b3d416616c5287e964086eeaefc1059f0dc09
  
    .header-logo {
         margin: 0 auto;
@@ -185,6 +214,7 @@ main{
         border: none;
         border-radius: 1.5625rem;
         box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+<<<<<<< HEAD
        
       
         position: relative;
@@ -195,6 +225,22 @@ main{
         &:hover {
             &::after{
                opacity: 1;
+=======
+        // opacity: 1;
+        // transition: ease-out all 300ms;
+        position: relative;
+        
+        // &:hover,
+        // &:active {
+        //     background: $button-gradient-hover;
+        //     box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.35);
+        //     opacity: 0.35;
+        // }
+
+        &:hover {
+            &::after{
+                opacity: 0.35;
+>>>>>>> 4b3b3d416616c5287e964086eeaefc1059f0dc09
             }
         }
         &::after {
@@ -204,12 +250,19 @@ main{
             right: 0;
             bottom: 0;
             left: 0;
+<<<<<<< HEAD
             background: linear-gradient(0deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.15) 100%);
             border-radius: 1.5625rem;
             box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.35);
             opacity: 0;
             z-index: -1;
             transition: opacity 250ms;
+=======
+            background: $button-gradient-hover;
+            opacity: 0;
+            z-index: -1;
+            transition: all 400ms;
+>>>>>>> 4b3b3d416616c5287e964086eeaefc1059f0dc09
         }
     }
 
@@ -253,9 +306,13 @@ main{
         background-image: url(../../assets/images/icon/like-color.png);
         }
     }
-
 // #endregion button like
 
+<<<<<<< HEAD
+// #endregion button like
+
+=======
+>>>>>>> 4b3b3d416616c5287e964086eeaefc1059f0dc09
 
 // #region card
 
@@ -291,7 +348,17 @@ main{
             }
         }
 
+<<<<<<< HEAD
        
+=======
+        .card-description {
+            display: flex;
+            justify-content: space-between;
+
+
+            
+        }
+>>>>>>> 4b3b3d416616c5287e964086eeaefc1059f0dc09
     }
 
 // #endregion card

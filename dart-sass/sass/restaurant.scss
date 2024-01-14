@@ -1,5 +1,6 @@
 @use "base";
 
+<<<<<<< HEAD
 $width-mobile:23.4375rem;
 $width-max-mobile:48rem;
 $width-desktop:60rem;
@@ -10,10 +11,21 @@ $width-max-desktop: 90rem;
 main {
     background-color: var(--background-color);
     @media (min-width: $width-desktop) {
+=======
+main {
+    background-color: var(--background-color);
+    @media (min-width:90rem) {
+>>>>>>> 4b3b3d416616c5287e964086eeaefc1059f0dc09
     background-color: #fff;
     }
 }
 
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> 4b3b3d416616c5287e964086eeaefc1059f0dc09
 .card {
     margin-top: 0px;
     //  .card-description {
@@ -35,6 +47,7 @@ main {
     }
 
     .card-description {
+<<<<<<< HEAD
         display: flex;
         justify-content: center;
         position: absolute;
@@ -48,14 +61,31 @@ main {
             justify-content: center;
         }
         @media (min-width:$width-desktop){
+=======
+        position: absolute;
+        bottom: -0.3rem;
+        width: 100%;
+        color: var(--black);
+        // background-image: url(../../assets/images/icon/Background.png);
+        background-image: url(../../assets/images/icon/card-description.svg);
+        background-size: cover;
+        @media (min-width:700px) {
+            display: flex;
+            justify-content: center;
+        }
+        @media (min-width:90rem) {
+>>>>>>> 4b3b3d416616c5287e964086eeaefc1059f0dc09
             width: 66.9375rem;
             left: 0;
             right: 0;
             margin: auto;
         }
+<<<<<<< HEAD
     }
     .like label{
         position: static;
+=======
+>>>>>>> 4b3b3d416616c5287e964086eeaefc1059f0dc09
     }
 }
 
@@ -67,6 +97,7 @@ main {
     @media (min-width:400px) {
         margin-left: 1.5rem;
     }
+<<<<<<< HEAD
 }
 
 
@@ -83,6 +114,21 @@ main {
     
 }
 
+=======
+}
+
+
+// menu
+.menu-content {
+    @media (min-width:90rem) {
+        width: 65.9375rem;
+        background-color: var(--background-color);
+        overflow: hidden;
+    }
+    
+}
+
+>>>>>>> 4b3b3d416616c5287e964086eeaefc1059f0dc09
 .menu {
     background-color: var(--background-color);
     .entrees {
@@ -108,11 +154,22 @@ main {
     }
 }
 
+<<<<<<< HEAD
 
 .menu-list {
     position: relative;
     overflow: hidden;
     margin: 0 auto;
+=======
+.menu-list {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: center;
+    
+
+>>>>>>> 4b3b3d416616c5287e964086eeaefc1059f0dc09
     width: 21.8125rem;
     height: 4.3125rem;
     padding: 0.8rem;
@@ -120,11 +177,15 @@ main {
     border-radius: 0.94019rem;
     background: var(--white);
     box-shadow: 0px 4.011px 15.043px 0px rgba(0, 0, 0, 0.10);
+<<<<<<< HEAD
     
+=======
+>>>>>>> 4b3b3d416616c5287e964086eeaefc1059f0dc09
     @media (min-width:700px) {
         width: 39.625rem;
     }
 
+<<<<<<< HEAD
     .select-btn {
         position: absolute;
         display: block;
@@ -226,6 +287,23 @@ main {
         }
         .select-btn {
             transform: translateX(-100%);
+=======
+        &-name {
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+            padding: 0.94rem;
+
+            h4 {
+                width: 14.25rem;
+                height: 1.3125rem;
+                font-size: 1.125rem;
+                font-weight: 500;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                // text-wrap: nowrap;
+            }
+>>>>>>> 4b3b3d416616c5287e964086eeaefc1059f0dc09
         }
     }
     
@@ -238,7 +316,9 @@ main {
         text-overflow: ellipsis;
         white-space: nowrap;
         
+            
     }
+<<<<<<< HEAD
    
 
 
@@ -249,6 +329,54 @@ main {
 
 
 
+=======
+    .select-btn{
+        display: none;
+    }
+            
+    .menu-list-description {
+    display: flex;
+    justify-content: space-between;
+    // width: 100%;
+    // align-items:center ;
+    
+    &-detail {
+        
+        width: 14.25rem;
+        font-size: 0.94019rem;
+        font-weight: 300;
+        white-space: nowrap;
+        @media (min-width:734px) {
+            flex: 1 0 14.25rem;
+        }
+    }
+    .prix {
+        // padding-right: 0.94rem;
+        font-size: 0.94019rem;
+        font-weight: 700;
+        color: #353535;
+        }
+    }
+.menu-list:hover,
+.menu-list:active {
+    &-name {
+        overflow: hidden;
+        flex: 1 0 18.125rem;
+    }
+    .select-btn {
+        display: block;
+        border: none;
+        outline: none;
+        // transition: all 1s;
+    }
+    .menu-list-description-detail {
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+}  
+    
+>>>>>>> 4b3b3d416616c5287e964086eeaefc1059f0dc09
 .btn {
     margin-top: 2.5rem;
     margin-bottom: 2.5rem;

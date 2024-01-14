@@ -34,6 +34,7 @@ h2 {
   margin: 0 auto;
 }
 
+<<<<<<< HEAD
 body {
   font-family: "Roboto", sans-serif;
   color: var(--black);
@@ -56,6 +57,8 @@ main {
   background-color: #fff;
 }
 
+=======
+>>>>>>> 4b3b3d416616c5287e964086eeaefc1059f0dc09
 .header {
   display: flex;
   align-items: center;
@@ -66,7 +69,10 @@ main {
 }
 @media (min-width: 90rem) {
   .header {
+<<<<<<< HEAD
     width: 90rem;
+=======
+>>>>>>> 4b3b3d416616c5287e964086eeaefc1059f0dc09
     height: 6rem;
   }
 }
@@ -160,10 +166,16 @@ main {
   border-radius: 1.5625rem;
   box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
   position: relative;
+<<<<<<< HEAD
   z-index: 1;
 }
 .btn:hover::after {
   opacity: 1;
+=======
+}
+.btn:hover::after {
+  opacity: 0.35;
+>>>>>>> 4b3b3d416616c5287e964086eeaefc1059f0dc09
 }
 .btn::after {
   content: "";
@@ -172,12 +184,19 @@ main {
   right: 0;
   bottom: 0;
   left: 0;
+<<<<<<< HEAD
   background: linear-gradient(0deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.15) 100%);
   border-radius: 1.5625rem;
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.35);
   opacity: 0;
   z-index: -1;
   transition: opacity 250ms;
+=======
+  background: linear-gradient(201deg, #9356DC -5.2%, #FF79DA 110.74%);
+  opacity: 0;
+  z-index: -1;
+  transition: all 400ms;
+>>>>>>> 4b3b3d416616c5287e964086eeaefc1059f0dc09
 }
 
 .like #heart-1 {

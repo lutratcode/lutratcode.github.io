@@ -1,6 +1,7 @@
 
 
     @use "base";
+<<<<<<< HEAD
     $width-mobile:23.4375rem;
     $width-max-mobile:48rem;
     $width-desktop:60rem;
@@ -8,6 +9,11 @@
 
     .goback-icon {
         @media (min-width: $width-max-mobile) {
+=======
+
+    .goback-icon {
+        @media (min-width:739px) {
+>>>>>>> 4b3b3d416616c5287e964086eeaefc1059f0dc09
             visibility: hidden;
         }
     }
