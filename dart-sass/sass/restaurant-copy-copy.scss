@@ -1,26 +1,17 @@
 @use "base";
 
-$width-mobile:23.4375rem;
-$width-max-mobile:48rem;
-$width-desktop:60rem;
-$width-max-desktop: 90rem;
-
-
-
 main {
     background-color: var(--background-color);
-    @media (min-width: $width-desktop) {
+    @media (min-width:90rem) {
     background-color: #fff;
     }
 }
 
+
+
+
 .card {
     margin-top: 0px;
-    //  .card-description {
-    //     
-           
-            
-    //     }
     &-img {
         border-radius: 0px;
         width: 100%;
@@ -35,27 +26,23 @@ main {
     }
 
     .card-description {
-        display: flex;
-        justify-content: center;
         position: absolute;
         bottom: -0.3rem;
-
         width: 100%;
         color: var(--black);
+        // background-image: url(../../assets/images/icon/Background.png);
         background-image: url(../../assets/images/icon/card-description.svg);
         background-size: cover;
         @media (min-width:700px) {
+            display: flex;
             justify-content: center;
         }
-        @media (min-width:$width-desktop){
+        @media (min-width:90rem) {
             width: 66.9375rem;
             left: 0;
             right: 0;
             margin: auto;
         }
-    }
-    .like label{
-        position: static;
     }
 }
 
@@ -73,9 +60,9 @@ main {
 
 
 
-
+// menu
 .menu-content {
-    @media (min-width:$width-desktop){
+    @media (min-width:90rem) {
         width: 65.9375rem;
         background-color: var(--background-color);
         overflow: hidden;
@@ -113,6 +100,10 @@ main {
     position: relative;
     overflow: hidden;
     margin: 0 auto;
+    // display: flex;
+    // flex-direction: row;
+    // justify-content: space-between;
+    // align-content: center;
     width: 21.8125rem;
     height: 4.3125rem;
     padding: 0.8rem;
@@ -123,6 +114,7 @@ main {
     
     @media (min-width:700px) {
         width: 39.625rem;
+        // width: 100%;
     }
 
     .select-btn {
@@ -135,6 +127,7 @@ main {
         top: 0.4px;
     }
  
+}
 
 .right {
     flex: none;
@@ -174,7 +167,6 @@ main {
       
     }
    
-}
 
 
 @for $i from 1 through 10 {
@@ -184,7 +176,7 @@ main {
 
 @media (max-width:700px) {
 
-.menu-list label {
+label {
     display: block;
     position: absolute;
     top: 0;
@@ -194,6 +186,7 @@ main {
     
     width: 21.8125rem;
     height: 4.3125rem;
+    // height: 69px;
     opacity: 0;
     z-index: 3;
 }  
@@ -217,12 +210,12 @@ main {
 // effet hover
 
 @media (min-width:700px) {
-    .menu-list label {
+    label {
         z-index: -1;
     }
     .menu-list:hover {
         .prix{
-            transform: translateX(-220%);
+            transform: translateX(-300%);
         }
         .select-btn {
             transform: translateX(-100%);
@@ -231,6 +224,10 @@ main {
     
 }
     .menu-list-name {
+        // padding-right: 0;
+        // width: 17.9375em;
+        
+        // overflow: hidden;
         
         height: 1.3125rem;
         font-size: 1.125rem;

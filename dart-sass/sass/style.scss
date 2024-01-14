@@ -1,6 +1,17 @@
 
 
     @use "base";
+    $width-mobile:23.4375rem;
+    $width-max-mobile:48rem;
+    $width-desktop:60rem;
+    $width-max-desktop: 90rem;
+
+    .goback-icon {
+        @media (min-width: $width-max-mobile) {
+            visibility: hidden;
+        }
+    }
+  
     
     .location {
         height: 3.125rem;
@@ -36,18 +47,23 @@
     // section intro
     .intro {
         width: 100%;
-        height: 17.94rem;
+        height: 17.97rem;
         background-color: #F6F6F6;
+        @media (min-width:900px) {
+           height: 14.94rem;
+            }
+
             &-titre {
             font-size: 1.5rem;
             font-weight: 700;
             text-align: center;
             margin: 0 auto;
             padding: 1.5rem 0;
-            word-wrap:break-word; width: 260px;
+            white-space: pre-wrap;
                 @media (min-width:900px) {
                 font-size: 2.5rem;
-                word-wrap: none; width: 100%;
+                white-space: nowrap; 
+                width: 100%;
                 padding: 1.88rem 0;
                 }
             }
@@ -67,15 +83,17 @@
         }
     }
     }
+    
     .section-fonctionnnement {
-        width: 100%;
+        width: 1500px;
         height: 27.5rem;
         margin: 0 1.25rem;
+        background-color: #008766;
         &-h2 {
-        margin: 3rem 1.25rem;
-        @media (min-width:1024px) {
+            margin: 3rem 1.25rem;
+            @media (min-width:$width-desktop) {
             margin: 3.12rem 11.25rem;
-        }
+             }
         }
         
     }
@@ -144,14 +162,17 @@
 
         
 
-        @media (min-width:739px) {
+        @media (min-width:$width-max-mobile) {
             flex-direction: row;
             justify-content: space-between;
             gap: 6.25rem;
         }
+    }
 
-    
-
+    .card-1, .card-2{
+    @media (min-width:$width-max-mobile) {
+            margin-bottom: 2rem;
+        } 
     }
 
     .card {

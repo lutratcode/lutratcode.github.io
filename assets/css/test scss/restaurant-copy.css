@@ -8,6 +8,18 @@ li {
   list-style: none;
 }
 
+body {
+  font-family: "Roboto", sans-serif;
+  color: var(--black);
+  margin: 0 auto;
+  width: 375px;
+}
+@media (min-width: 375px) {
+  body {
+    width: 100%;
+  }
+}
+
 a {
   text-decoration: none;
 }
@@ -34,28 +46,6 @@ h2 {
   margin: 0 auto;
 }
 
-body {
-  font-family: "Roboto", sans-serif;
-  color: var(--black);
-  margin: 0 auto;
-  width: 23.4375rem;
-  background-color: #000;
-}
-@media (min-width: 23.4375rem) {
-  body {
-    width: 100%;
-  }
-}
-@media (min-width: 90rem) {
-  body {
-    width: 90rem;
-  }
-}
-
-main {
-  background-color: #fff;
-}
-
 .header {
   display: flex;
   align-items: center;
@@ -66,7 +56,6 @@ main {
 }
 @media (min-width: 90rem) {
   .header {
-    width: 90rem;
     height: 6rem;
   }
 }
@@ -100,7 +89,7 @@ main {
   padding: 1.375rem 1.5625rem;
   background-color: var(--grey);
 }
-@media (min-width: 60rem) {
+@media (min-width: 67.5rem) {
   .footer {
     display: flex;
     flex-direction: row-reverse;
@@ -116,7 +105,7 @@ main {
   font-size: 1.125rem;
   margin-bottom: 0.5rem;
 }
-@media (min-width: 48rem) {
+@media (min-width: 739px) {
   .footer-title {
     margin-bottom: 0;
   }
@@ -133,7 +122,7 @@ main {
 .footer-title a, .footer-li a {
   color: var(--white);
 }
-@media (min-width: 48rem) {
+@media (min-width: 739px) {
   .footer ul {
     display: flex;
     flex-direction: row;
@@ -180,48 +169,15 @@ main {
   transition: opacity 250ms;
 }
 
-.like #heart-1 {
-  display: none;
-}
-.like #heart-2 {
-  display: none;
-}
-.like #heart-3 {
-  display: none;
-}
-.like #heart-4 {
-  display: none;
-}
-.like label {
-  display: inline-block;
+.like {
   width: 1.46rem;
   height: 1.3125rem;
-  position: absolute;
-  bottom: 2rem;
-  right: 1.75rem;
-  cursor: pointer;
-}
-.like .icon-like {
-  display: block;
-  position: absolute;
-  width: 1.46rem;
-  height: 1.3125rem;
-  background: url(../../assets/images/icon/like.png) no-repeat;
+  margin: 1.44rem 1.75rem 0 0;
+  background-image: url(../../assets/images/icon/like.png);
 }
 
-#heart-1:checked ~ .icon-like {
-  background-image: url(../../assets/images/icon/like-color.png);
-}
-
-#heart-2:checked ~ .icon-like {
-  background-image: url(../../assets/images/icon/like-color.png);
-}
-
-#heart-3:checked ~ .icon-like {
-  background-image: url(../../assets/images/icon/like-color.png);
-}
-
-#heart-4:checked ~ .icon-like {
+.like:hover,
+.like:active {
   background-image: url(../../assets/images/icon/like-color.png);
 }
 
@@ -244,11 +200,15 @@ main {
 .card .card-delice .card-img {
   background-image: url(../../assets/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg);
 }
+.card .card-description {
+  display: flex;
+  justify-content: space-between;
+}
 
 main {
   background-color: var(--background-color);
 }
-@media (min-width: 60rem) {
+@media (min-width: 90rem) {
   main {
     background-color: #fff;
   }
@@ -268,8 +228,6 @@ main {
   font-size: 1.75rem;
 }
 .card .card-description {
-  display: flex;
-  justify-content: center;
   position: absolute;
   bottom: -0.3rem;
   width: 100%;
@@ -279,19 +237,17 @@ main {
 }
 @media (min-width: 700px) {
   .card .card-description {
+    display: flex;
     justify-content: center;
   }
 }
-@media (min-width: 60rem) {
+@media (min-width: 90rem) {
   .card .card-description {
     width: 66.9375rem;
     left: 0;
     right: 0;
     margin: auto;
   }
-}
-.card .like label {
-  position: static;
 }
 
 .new {
@@ -307,7 +263,7 @@ main {
   }
 }
 
-@media (min-width: 60rem) {
+@media (min-width: 90rem) {
   .menu-content {
     width: 65.9375rem;
     background-color: var(--background-color);
@@ -346,6 +302,10 @@ main {
   position: relative;
   overflow: hidden;
   margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-content: center;
   width: 21.8125rem;
   height: 4.3125rem;
   padding: 0.8rem;
@@ -367,18 +327,17 @@ main {
   right: -60px;
   top: 0.4px;
 }
-.menu-list .right {
+
+.right {
   flex: none;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: center;
   align-items: end;
 }
-.menu-list .prix {
+
+.prix {
   display: block;
-  position: absolute;
-  right: 0.8rem;
-  top: 2.5rem;
   width: 1.6875rem;
   height: 1.125em;
   font-size: 0.94019rem;
@@ -386,14 +345,14 @@ main {
   color: #353535;
   transition: all 400ms ease-in-out;
 }
-.menu-list .menu-list-description-detail {
+
+.menu-list-description-detail {
   font-size: 0.94019rem;
   height: 1.1875rem;
   margin-top: 0.31rem;
   font-weight: 300;
   position: absolute;
   left: 0.8rem;
-  top: 2.1rem;
   right: 0;
   overflow: hidden;
   white-space: nowrap;
@@ -441,7 +400,7 @@ main {
 }
 
 @media (max-width: 700px) {
-  .menu-list label {
+  label {
     display: block;
     position: absolute;
     top: 0;
@@ -513,49 +472,24 @@ main {
   #toggle-10:checked ~ .select-btn {
     transform: translate(-60px);
   }
-  #toggle-1:checked ~ .menu-list-description-detail {
-    right: 120px;
-  }
-  #toggle-2:checked ~ .menu-list-description-detail {
-    right: 120px;
-  }
-  #toggle-3:checked ~ .menu-list-description-detail {
-    right: 120px;
-  }
-  #toggle-4:checked ~ .menu-list-description-detail {
-    right: 120px;
-  }
-  #toggle-5:checked ~ .menu-list-description-detail {
-    right: 120px;
-  }
-  #toggle-6:checked ~ .menu-list-description-detail {
-    right: 120px;
-  }
-  #toggle-7:checked ~ .menu-list-description-detail {
-    right: 120px;
-  }
-  #toggle-8:checked ~ .menu-list-description-detail {
-    right: 120px;
-  }
-  #toggle-9:checked ~ .menu-list-description-detail {
-    right: 120px;
-  }
-  #toggle-10:checked ~ .menu-list-description-detail {
-    right: 120px;
-  }
 }
 @media (min-width: 700px) {
-  .menu-list label {
+  label {
     z-index: -1;
   }
   .menu-list:hover .prix {
-    transform: translateX(-220%);
+    transform: translateX(-300%);
   }
   .menu-list:hover .select-btn {
     transform: translateX(-100%);
   }
 }
 .menu-list-name {
+  padding-right: 0;
+  width: 17.9375em;
+  overflow: hidden;
+}
+.menu-list-name h4 {
   height: 1.3125rem;
   font-size: 1.125rem;
   font-weight: 500;
@@ -569,4 +503,4 @@ main {
   flex: 0;
 }
 
-/*# sourceMappingURL=restaurant.css.map */
+/*# sourceMappingURL=restaurant-copy.css.map */
