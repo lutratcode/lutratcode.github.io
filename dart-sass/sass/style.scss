@@ -6,6 +6,73 @@
     $width-desktop:60rem;
     $width-max-desktop: 90rem;
 
+    // #region loader
+.loader{
+    font-family:'Shrikhand';
+    font-size: 12px;
+    color: var(--violet);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color:var(--background-color);
+    opacity: 0.8;
+    z-index: 20;
+    animation: fade_out 200ms 2s forwards;
+    transform-origin: top;
+}
+.loader_, .loader_anime, .loader_logo {
+    position: absolute;
+}
+.loader_{
+    top: 50%;
+    left: 50%;
+}
+.loader_logo, .loader_anime {
+    top: 0;
+    left: 0;
+    border-radius: 50%;
+}
+.loader_logo {
+    width: 200px;
+    height: 200px;
+    margin-left: -100px;
+    margin-top: -100px;
+    background-color: rgba(255, 255, 255, 0.05);
+    text-align: center;
+    vertical-align: middle;
+    line-height: 200px;
+}
+.loader_anime {
+    width: 100px;
+    height: 100px;
+    margin-left: -50px;
+    margin-top: -50px;
+    border-top: 3px solid var(--violet);
+    animation: spin 200ms linear 10;
+}
+@keyframes spin {
+    0% { transform: rotate(0deg);
+    }
+    100% { transform: rotate(360deg);
+    }
+}
+
+@keyframes fade_out {
+    0%{transform: scale(1);}
+    100%{transform: scale(0);}
+    
+}
+
+
+
+// #endregion
+
+
+
+
+
     .goback-icon {
         @media (min-width: $width-max-mobile) {
             visibility: hidden;
