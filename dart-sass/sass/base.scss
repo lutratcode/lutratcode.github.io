@@ -216,15 +216,9 @@ main{
 
     // like icon
     .like {
-       
-        // margin: 1.44rem 1.75rem 0 0;
-        // position: relative;
-        
-
         @for $i from 1 through 4 {
             #heart-#{$i} {display: none;}
         }
-
 
         label {
             display: inline-block;
@@ -234,8 +228,6 @@ main{
             bottom: 2rem;
             right: 1.75rem;
             cursor: pointer;
-
-
         }
         .icon-like{
             display: block;
@@ -245,14 +237,25 @@ main{
             width: 1.46rem;
             height: 1.3125rem;
             background: url(../../assets/images/icon/like.png) no-repeat;
+            transition: all 1s ease-in-out;
+            }
+        }
+    @media (max-width: $width-desktop) {
+        @for $i from 1 through 4{
+        #heart-#{$i}:checked ~ .icon-like {
+            background-image: url(../../assets/images/icon/like-color.png);
+               }
+        }
+    }
 
+    @media (min-width: $width-desktop) {
+       
+        .icon-like:hover {
+            background-image: url(../../assets/images/icon/like-color.png);
+            }
         }
-    }
-    @for $i from 1 through 4{
-    #heart-#{$i}:checked ~ .icon-like {
-        background-image: url(../../assets/images/icon/like-color.png);
-        }
-    }
+    
+
 
 // #endregion button like
 

@@ -207,24 +207,28 @@ main {
   width: 1.46rem;
   height: 1.3125rem;
   background: url(../../assets/images/icon/like.png) no-repeat;
+  transition: all 1s ease-in-out;
 }
 
-#heart-1:checked ~ .icon-like {
-  background-image: url(../../assets/images/icon/like-color.png);
+@media (max-width: 60rem) {
+  #heart-1:checked ~ .icon-like {
+    background-image: url(../../assets/images/icon/like-color.png);
+  }
+  #heart-2:checked ~ .icon-like {
+    background-image: url(../../assets/images/icon/like-color.png);
+  }
+  #heart-3:checked ~ .icon-like {
+    background-image: url(../../assets/images/icon/like-color.png);
+  }
+  #heart-4:checked ~ .icon-like {
+    background-image: url(../../assets/images/icon/like-color.png);
+  }
 }
-
-#heart-2:checked ~ .icon-like {
-  background-image: url(../../assets/images/icon/like-color.png);
+@media (min-width: 60rem) {
+  .icon-like:hover {
+    background-image: url(../../assets/images/icon/like-color.png);
+  }
 }
-
-#heart-3:checked ~ .icon-like {
-  background-image: url(../../assets/images/icon/like-color.png);
-}
-
-#heart-4:checked ~ .icon-like {
-  background-image: url(../../assets/images/icon/like-color.png);
-}
-
 .card {
   position: relative;
 }
@@ -269,7 +273,7 @@ main {
 }
 .card .card-description {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   position: absolute;
   bottom: -0.3rem;
   width: 100%;
@@ -292,6 +296,7 @@ main {
 }
 .card .like label {
   position: static;
+  width: 4.46rem;
 }
 
 .new {
