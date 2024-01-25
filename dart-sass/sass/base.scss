@@ -21,14 +21,12 @@ h2 {
     --grey: #353535;
     --grey-2: #EAEAEA;
     --green-font: #008766;
-    --green: #99E2D0;
     --black: #101010;
-    --blue: #89C8FA;
-    --blue-2: #003A68;
-    --primary:black;
     --white: #fff;
     --background-color: #F6F6F6;
-    --violet:  #9356DC;
+    --secondaire: #FF79DA;
+    --tertiaire:#99E2D0;
+    --primaire:#9356DC;
 }
 
 
@@ -165,8 +163,8 @@ main{
         text-align: center;
     }
 
-    $button-gradient: linear-gradient(193deg, #9356DC -11.44%, #FF79DA 123.93%);
-    $button-gradient-hover: linear-gradient(201deg, #9356DC -5.2%, #FF79DA 110.74%);
+    $button-gradient: linear-gradient(193deg, var(--primaire) -11.44%, var(--secondaire) 123.93%);
+    $button-gradient-hover: linear-gradient(201deg, var(--primaire) -5.2%, var(--secondaire) 110.74%);
     
     // (0deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.15) 100%);
     
@@ -237,6 +235,10 @@ main{
             width: 1.46rem;
             height: 1.3125rem;
             background: url(../../assets/images/icon/like.png) no-repeat;
+            // -moz-transition: background-image 1s ea/se-in-out ;
+            // -moz-transition-property: background-image;
+            // -moz-transition-duration: 1s;
+            // -moz-transition-timing-function: ease-in-out;
             transition: all 1s ease-in-out;
             }
         }

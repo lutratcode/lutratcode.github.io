@@ -20,14 +20,12 @@ h2 {
   --grey: #353535;
   --grey-2: #EAEAEA;
   --green-font: #008766;
-  --green: #99E2D0;
   --black: #101010;
-  --blue: #89C8FA;
-  --blue-2: #003A68;
-  --primary:black;
   --white: #fff;
   --background-color: #F6F6F6;
-  --violet: #9356DC;
+  --secondaire: #FF79DA;
+  --tertiaire:#99E2D0;
+  --primaire:#9356DC;
 }
 
 .wrapper {
@@ -155,7 +153,7 @@ main {
   text-align: center;
   line-height: 3.125rem;
   color: var(--white);
-  background: linear-gradient(193deg, #9356DC -11.44%, #FF79DA 123.93%);
+  background: linear-gradient(193deg, var(--primaire) -11.44%, var(--secondaire) 123.93%);
   border: none;
   border-radius: 1.5625rem;
   box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
@@ -312,6 +310,17 @@ main {
   }
 }
 
+.menu-content {
+  overflow: hidden;
+}
+@keyframes defiler {
+  0% {
+    max-height: 0;
+  }
+  100% {
+    max-height: 1150px;
+  }
+}
 @media (min-width: 60rem) {
   .menu-content {
     width: 65.9375rem;
@@ -322,6 +331,19 @@ main {
 
 .menu {
   background-color: var(--background-color);
+  overflow: hidden;
+}
+.menu:first-child {
+  overflow: hidden;
+  animation: defiler 1s 1s ease-in-out both;
+}
+.menu:nth-child(2) {
+  overflow: hidden;
+  animation: defiler 1s 2s ease-in-out both;
+}
+.menu:nth-child(3) {
+  overflow: hidden;
+  animation: defiler 1s 3s ease-in-out both;
 }
 .menu .entrees {
   width: 21.8125rem;
@@ -564,6 +586,7 @@ main {
   height: 1.3125rem;
   font-size: 1.125rem;
   font-weight: 500;
+  overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
