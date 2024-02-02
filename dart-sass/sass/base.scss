@@ -166,8 +166,6 @@ main{
     $button-gradient: linear-gradient(193deg, var(--primaire) -11.44%, var(--secondaire) 123.93%);
     $button-gradient-hover: linear-gradient(201deg, var(--primaire) -5.2%, var(--secondaire) 110.74%);
     
-    // (0deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.15) 100%);
-    
  
 
     .btn {
@@ -230,35 +228,44 @@ main{
         .icon-like{
             display: block;
             position: absolute;
-            // top: 0;
-            
             width: 1.46rem;
             height: 1.3125rem;
+            z-index: 100;
             background: url(../../assets/images/icon/like.png) no-repeat;
-            // -moz-transition: background-image 1s ea/se-in-out ;
-            // -moz-transition-property: background-image;
-            // -moz-transition-duration: 1s;
-            // -moz-transition-timing-function: ease-in-out;
-            transition: all 1s ease-in-out;
-            }
-        }
-    @media (max-width: $width-desktop) {
-        @for $i from 1 through 4{
-        #heart-#{$i}:checked ~ .icon-like {
-            background-image: url(../../assets/images/icon/like-color.png);
-               }
-        }
-    }
 
-    @media (min-width: $width-desktop) {
-       
-        .icon-like:hover {
-            background-image: url(../../assets/images/icon/like-color.png);
+            
+            &:after{
+                content: "";
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                opacity: 0;
+               
             }
+
+            &:after{
+                background: url(../../assets/images/icon/like-color.png) no-repeat;
+                transition: opacity 0.5s ease-in-out;
+                z-index: 5;
+            }
+
+            @media (min-width:$width-desktop) {
+                  &:hover:after{
+                    opacity: 1;
+                }
+            }
+            }
+          
         }
     
-
-
+        @for $i from 1 through 4{
+            #heart-#{$i}:checked ~ .icon-like:after {
+                opacity: 1;
+                   }
+                }   
+          
 // #endregion button like
 
 

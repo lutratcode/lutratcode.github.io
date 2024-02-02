@@ -204,29 +204,45 @@ main {
   position: absolute;
   width: 1.46rem;
   height: 1.3125rem;
+  z-index: 100;
   background: url(../../assets/images/icon/like.png) no-repeat;
-  transition: all 1s ease-in-out;
 }
-
-@media (max-width: 60rem) {
-  #heart-1:checked ~ .icon-like {
-    background-image: url(../../assets/images/icon/like-color.png);
-  }
-  #heart-2:checked ~ .icon-like {
-    background-image: url(../../assets/images/icon/like-color.png);
-  }
-  #heart-3:checked ~ .icon-like {
-    background-image: url(../../assets/images/icon/like-color.png);
-  }
-  #heart-4:checked ~ .icon-like {
-    background-image: url(../../assets/images/icon/like-color.png);
-  }
+.like .icon-like:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0;
+}
+.like .icon-like:after {
+  background: url(../../assets/images/icon/like-color.png) no-repeat;
+  transition: opacity 0.5s ease-in-out;
+  z-index: 5;
 }
 @media (min-width: 60rem) {
-  .icon-like:hover {
-    background-image: url(../../assets/images/icon/like-color.png);
+  .like .icon-like:hover:after {
+    opacity: 1;
   }
 }
+
+#heart-1:checked ~ .icon-like:after {
+  opacity: 1;
+}
+
+#heart-2:checked ~ .icon-like:after {
+  opacity: 1;
+}
+
+#heart-3:checked ~ .icon-like:after {
+  opacity: 1;
+}
+
+#heart-4:checked ~ .icon-like:after {
+  opacity: 1;
+}
+
 .card {
   position: relative;
 }
