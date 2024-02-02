@@ -16,11 +16,7 @@ main {
 
 .card {
     margin-top: 0px;
-    //  .card-description {
-    //     
-           
-            
-    //     }
+   
     &-img {
         border-radius: 0px;
         width: 100%;
@@ -36,7 +32,7 @@ main {
 
     .card-description {
         display: flex;
-        justify-content: center;
+        justify-content:space-between;
         position: absolute;
         bottom: -0.3rem;
 
@@ -56,6 +52,7 @@ main {
     }
     .like label{
         position: static;
+        width: 4.46rem;
     }
 }
 
@@ -75,6 +72,14 @@ main {
 
 
 .menu-content {
+    overflow: hidden;
+    // animation: defiler 6s linear;
+    // effet animation plats --apparaître progressivement avec un léger décalage dans le temps
+    @keyframes defiler{
+        0% {max-height: 0;}
+        100%{max-height: 1150px;}
+        }
+
     @media (min-width:$width-desktop){
         width: 65.9375rem;
         background-color: var(--background-color);
@@ -85,6 +90,18 @@ main {
 
 .menu {
     background-color: var(--background-color);
+    overflow: hidden;
+    &:first-child{
+        overflow: hidden;
+    animation: defiler 1s 1s ease-in-out both;}
+
+    &:nth-child(2){
+        overflow: hidden;
+    animation: defiler 1s 2s ease-in-out both;}
+
+    &:nth-child(3){
+        overflow: hidden;
+        animation: defiler 1s 3s ease-in-out both;}
     .entrees {
         width: 21.8125rem;
         @media (min-width:700px) {
@@ -107,6 +124,8 @@ main {
     background-position: 0 100%;
     }
 }
+
+
 
 
 .menu-list {
@@ -212,6 +231,7 @@ main {
 @for $i from 1 through 10{
     #toggle-#{$i}:checked ~ .menu-list-description-detail {right: 120px;}
 }
+
 }
 
 // effet hover
@@ -231,10 +251,10 @@ main {
     
 }
     .menu-list-name {
-        
         height: 1.3125rem;
         font-size: 1.125rem;
         font-weight: 500;
+        overflow: hidden;
         text-overflow: ellipsis;
         white-space: nowrap;
         
@@ -254,4 +274,3 @@ main {
     margin-bottom: 2.5rem;
     flex: 0;
 }
-

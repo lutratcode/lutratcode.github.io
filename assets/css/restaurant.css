@@ -20,14 +20,12 @@ h2 {
   --grey: #353535;
   --grey-2: #EAEAEA;
   --green-font: #008766;
-  --green: #99E2D0;
   --black: #101010;
-  --blue: #89C8FA;
-  --blue-2: #003A68;
-  --primary:black;
   --white: #fff;
   --background-color: #F6F6F6;
-  --violet: #9356DC;
+  --secondaire: #FF79DA;
+  --tertiaire:#99E2D0;
+  --primaire:#9356DC;
 }
 
 .wrapper {
@@ -155,7 +153,7 @@ main {
   text-align: center;
   line-height: 3.125rem;
   color: var(--white);
-  background: linear-gradient(193deg, #9356DC -11.44%, #FF79DA 123.93%);
+  background: linear-gradient(193deg, var(--primaire) -11.44%, var(--secondaire) 123.93%);
   border: none;
   border-radius: 1.5625rem;
   box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
@@ -206,23 +204,43 @@ main {
   position: absolute;
   width: 1.46rem;
   height: 1.3125rem;
+  z-index: 100;
   background: url(../../assets/images/icon/like.png) no-repeat;
 }
-
-#heart-1:checked ~ .icon-like {
-  background-image: url(../../assets/images/icon/like-color.png);
+.like .icon-like:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0;
+}
+.like .icon-like:after {
+  background: url(../../assets/images/icon/like-color.png) no-repeat;
+  transition: opacity 0.5s ease-in-out;
+  z-index: 5;
+}
+@media (min-width: 60rem) {
+  .like .icon-like:hover:after {
+    opacity: 1;
+  }
 }
 
-#heart-2:checked ~ .icon-like {
-  background-image: url(../../assets/images/icon/like-color.png);
+#heart-1:checked ~ .icon-like:after {
+  opacity: 1;
 }
 
-#heart-3:checked ~ .icon-like {
-  background-image: url(../../assets/images/icon/like-color.png);
+#heart-2:checked ~ .icon-like:after {
+  opacity: 1;
 }
 
-#heart-4:checked ~ .icon-like {
-  background-image: url(../../assets/images/icon/like-color.png);
+#heart-3:checked ~ .icon-like:after {
+  opacity: 1;
+}
+
+#heart-4:checked ~ .icon-like:after {
+  opacity: 1;
 }
 
 .card {
@@ -269,7 +287,7 @@ main {
 }
 .card .card-description {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   position: absolute;
   bottom: -0.3rem;
   width: 100%;
@@ -292,6 +310,7 @@ main {
 }
 .card .like label {
   position: static;
+  width: 4.46rem;
 }
 
 .new {
@@ -307,6 +326,17 @@ main {
   }
 }
 
+.menu-content {
+  overflow: hidden;
+}
+@keyframes defiler {
+  0% {
+    max-height: 0;
+  }
+  100% {
+    max-height: 1150px;
+  }
+}
 @media (min-width: 60rem) {
   .menu-content {
     width: 65.9375rem;
@@ -317,6 +347,19 @@ main {
 
 .menu {
   background-color: var(--background-color);
+  overflow: hidden;
+}
+.menu:first-child {
+  overflow: hidden;
+  animation: defiler 1s 1s ease-in-out both;
+}
+.menu:nth-child(2) {
+  overflow: hidden;
+  animation: defiler 1s 2s ease-in-out both;
+}
+.menu:nth-child(3) {
+  overflow: hidden;
+  animation: defiler 1s 3s ease-in-out both;
 }
 .menu .entrees {
   width: 21.8125rem;
@@ -559,6 +602,7 @@ main {
   height: 1.3125rem;
   font-size: 1.125rem;
   font-weight: 500;
+  overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
