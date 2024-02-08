@@ -155,26 +155,19 @@ main {
     }
  
 
-// .right {
-//     flex: none;
-//     display: flex;
-//     flex-direction:row;
-//     justify-content:space-between;
-//     align-items:end;
-// }
 
-.prix {
-    display: block;
-    position: absolute;
-    right:0.8rem;
-    top: 2.5rem;
-    width: 1.6875rem;
-    height: 1.125em;
-    font-size: 0.94019rem;
-    font-weight: 700;
-    color: #353535;
-    transition: all 400ms ease-in-out;
-    }
+    .prix {
+        display: block;
+        position: absolute;
+        right:0.8rem;
+        top: 2.5rem;
+        width: 1.6875rem;
+        height: 1.125em;
+        font-size: 0.94019rem;
+        font-weight: 700;
+        color: #353535;
+        transition: all 400ms ease-in-out;
+        }
 
 
        
@@ -260,14 +253,6 @@ main {
         
     }
    
-
-
-
-
-
-
-
-
 
 .btn {
     margin-top: 2.5rem;

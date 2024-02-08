@@ -45,23 +45,23 @@ $width-max-desktop: 90rem;
     line-height: 200px;
 }
 .loader_anime {
-width: 100px;
-height: 100px;
-margin-left: -50px;
-margin-top: -50px;
-border-top: 3px solid var(--primaire);
-animation: spin 200ms linear 10;
+    width: 100px;
+    height: 100px;
+    margin-left: -50px;
+    margin-top: -50px;
+    border-top: 3px solid var(--primaire);
+    animation: spin 200ms linear 10;
 }
 @keyframes spin {
-0% { transform: rotate(0deg);
-}
-100% { transform: rotate(360deg);
-}
+    0% { transform: rotate(0deg);
+    }
+    100% { transform: rotate(360deg);
+    }
 }
 
 @keyframes fade_out {
-0%{transform: scale(1);}
-100%{transform: scale(0);}
+    0%{transform: scale(1);}
+    100%{transform: scale(0);}
 }
 
 // #endregion
@@ -136,12 +136,12 @@ animation: spin 200ms linear 10;
     
         
     .btn {
-     margin: 1.68rem auto 3.56rem;
+        margin: 1.68rem auto 3.56rem;
 
-     @media (min-width:900px) {
+        @media (min-width:900px) {
         margin-bottom: 1.88rem;
+        }
     }
-}
 }
 
 .section-fonctionnnement {
